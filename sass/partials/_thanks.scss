@@ -1,0 +1,106 @@
+.wrapper_thanks {
+    @include block;
+    height             : 100vh;
+    background-image   : url(../img/bg_thanks.png);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: bottom center;
+    overflow           : hidden;
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
+    padding-left: 200px;
+
+    @media (max-width: 1023px) {
+        padding-left: 100px;
+    }
+  
+    @media (max-width:767px) {
+        padding-left: 60px;
+    }
+  
+
+    div:first-child {
+        @include block;
+        height     : 454px;
+        width      : 900px;
+        padding    : 80px 0 176px 114px;
+        font-family: "Philosopher", sans-serif;
+        @media (max-width: 1023px) {
+            padding-left: 100px;
+        }
+        @media (max-width:767px) {
+            padding-left: 60px;
+        }
+
+        * {
+            z-index : 3;
+            position: relative;
+        }
+
+        &:before {
+            content   : '';
+            position  : absolute;
+            top       : 0;
+            left      : 0;
+            width     : 1650px;
+            height    : 100%;
+            background: linear-gradient(90deg, rgba(255, 224, 205, 0.85) 0%, rgba(255, 224, 205, 0.526823) 45.31%, rgba(255, 224, 205, 0.2975) 70.83%, rgba(255, 224, 205, 0) 100%);
+            box-shadow: -10px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+
+        span {
+
+            display      : block;
+            margin-bottom: 60px;
+            font-size    : 40px;
+            color        : #33425B;
+            text-shadow  : $shadow;
+            @media (max-width: 767px) {
+                font-size    : 24px;                
+            }
+        }
+
+        p {
+            font-size    : 36px;
+            margin-bottom: 14px;
+            @media (max-width:1365px) {
+                width: 380px;                
+            }
+            @media (max-width: 767px) {
+                font-size    : 18px;
+                width: 185px;           
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+
+    }
+
+    div:last-child{
+        position: absolute;
+        right: 0;
+        top: 32%;
+        @media (max-width: 1023px) {
+               width: 186px;           
+        }    
+        @media (max-width: 767px) {
+               width: 100px;
+               top: 50%;           
+        }    
+
+        img{
+            width: 100%;
+           
+        }
+    }
+
+
+
+
+
+}

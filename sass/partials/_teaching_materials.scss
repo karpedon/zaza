@@ -1,0 +1,246 @@
+.teaching_materials {
+    @include block;
+    padding-bottom: 100px;
+    @media (max-width: 767px) {
+        padding-bottom: 60px;
+    }
+
+
+    h2 {
+        margin-bottom: 75px;
+    }
+
+    .teaching_materials__wrappeer_book {
+        @include block;
+        padding-left: 130px;
+        height      : 657px;
+
+        @media (max-width: 767px) {
+            padding-left: 0;
+        }
+
+
+        li {
+            @include block;
+            float       : left;
+            width       : 311px;
+            margin-right: 220px;
+
+            @media (max-width:1365px) {
+                margin-right: 150px;
+            }
+            @media (max-width:1023px) {
+                margin-bottom: 60px;
+            }
+            
+
+            @media (max-width:767px) {
+                width        : 255px;
+                margin-right : 0;
+                
+            }
+
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:before {
+                content         : "";
+                position        : absolute;
+                top             : -45px;
+                right           : -22px;
+                width           : 1px;
+                height          : 307px;
+                background-color: #29252c;
+                box-shadow      : $shadow;
+                z-index         : 5;
+
+                @media (max-width:1365px) {
+                    height: 251px;
+                    right : -12px;
+                    top   : -35px;
+                }
+            }
+
+            &:after {
+                content         : "";
+                position        : absolute;
+                top             : -15px;
+                right           : -35px;
+                width           : 307px;
+                height          : 1px;
+                background-color: #29252c;
+                box-shadow      : $shadow;
+                z-index         : 5;
+
+                @media (max-width:1365px) {
+                    width: 251px;
+                    right: -20px;
+                }
+            }
+
+            div {
+                @include block;
+                min-height   : 1px;
+                margin-bottom: 45px;
+
+                @media (max-width:767px) {
+                    margin-bottom: 37px;
+
+                }
+
+                img:first-child {
+                    @include block;
+                    z-index: 1;
+                }
+
+                .overlay_book {
+                    position: absolute;
+                    bottom  : -20px;
+                    left    : -10px;
+                    z-index : 2;
+
+                    @media (max-width:767px) {
+                        bottom: -13px;
+                        left  : -5px;
+
+                    }
+                }
+
+                .icon_download {
+                    position  : absolute;
+                    bottom    : 8px;
+                    left      : 20px;
+                    width     : 32px;
+                    height    : 42px;
+                    z-index   : 3;
+                    display   : block;
+                    transition: $speedAnimation;
+
+
+                    img {
+                        width: 100%;
+                    }
+
+                    @media (max-width:767px) {
+                        bottom: 7px;
+                        left  : 10px;
+                        width : 25px;
+                        height: 33px;
+
+                    }
+
+
+                    &:hover {
+                        transform: $hoverAnimation;
+                    }
+
+
+                }
+            }
+
+            p {
+                width: 350px;
+
+                @media (max-width:767px) {
+                    font-size    : 14px;
+                    padding-right: 20px;
+                    width        : 100%;
+
+                }
+            }
+        }
+    }
+
+
+    .book_authors {
+        @include block;
+        clear: both;
+
+        li {
+            @include block;
+            
+            margin-bottom: 42px;
+            font-size    : 30px;
+            padding-left : 49px;
+            transition   : $speedAnimation;
+
+            @media (max-width:767px) {
+                margin-bottom: 25px;
+                font-size    : 14px;
+                padding-left : 25px;
+            }
+
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content          : '';
+                position         : absolute;
+                width            : 14px;
+                height           : 23px;
+                background-image : url(../img/marker_list.png);
+                background-repeat: no-repeat;
+                top              : 5px;
+                left             : 0;
+
+                @media (max-width:767px) {
+                    background-size: 70%;
+                }
+            }
+
+            &:hover {
+
+                margin-left: 10px;
+            }
+
+            a {
+                // text-decoration: underline;
+                color        : #000;
+                border-bottom: 2px solid #000;
+                transition   : $speedAnimation;
+
+                @media (max-width:767px) {
+                    border-bottom: 1px solid #000;
+                    line-height: 1.4;
+                }
+
+
+                &:hover {
+                    border     : none;
+                    color      : $redColor;
+                    text-shadow: $shadow;
+
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .column {
+        width   : 200px;
+        height  : 170px;
+        position: absolute;
+        left    : -170px;
+        top     : 336px;
+
+        img {
+            width: 100%;
+        }
+
+        @media (max-width:1660px) {
+            left : 600px;
+            top  : 10px;
+            width: 112px;
+        }
+
+        @media (max-width:767px) {
+            left : 250px;
+            top  : 0;
+            width: 51px;
+        }
+    }
+}

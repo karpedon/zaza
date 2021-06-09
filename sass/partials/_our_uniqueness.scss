@@ -1,0 +1,310 @@
+.our_uniqueness_title {
+  @include block;
+  margin-bottom: 60px;
+}
+
+.our_uniqueness {
+  width              : 100%;
+  height             : 1039px;
+  padding-top        : 68px;
+  margin-bottom      : 120px;
+  background-image   : url(../img/bg_our_uniqueness.png);
+  background-repeat  : no-repeat;
+  background-size    : cover;
+  background-position: bottom right;
+  color              : #fff;
+
+  @media (max-width: 1365px) {
+    height: 1000px;
+  }
+
+  @media (max-width: 1023px) {
+    height     : 780px;
+    padding-top: 50px;
+  }
+
+  @media (max-width: 767px) {
+    height             : 1210px;
+    padding-top        : 30px;
+    background-position: center center;
+    margin-bottom      : 60px;
+  }
+
+  .text_uniqueness {
+    font-size    : 30px;
+    margin-bottom: 68px;
+    width        : 100%;
+    height       : 35px;
+
+    @media (max-width: 1023px) {
+      font-size    : 26px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  ul {
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+
+    @media (max-width: 767px) {
+      flex-wrap      : nowrap;
+      flex-direction : column;
+      justify-content: space-around;
+      margin         : 0 auto;
+      width          : 320px;
+    }
+
+    li {
+      max-width          : 458px;
+      width              : 50%;
+      width              : 460px;
+      height             : 142px;
+      padding            : 0 30px;
+      margin-bottom      : 80px;
+      display            : flex;
+      align-items        : center;
+      font-size          : 24px;
+      position           : relative;
+      background-repeat  : no-repeat;
+      background-position: top left;
+      background-size    : cover;
+
+      @media (max-width: 1365px) {
+        font-size: 22px;
+        width    : 430px;
+        height   : 133px;
+      }
+
+      @media (max-width: 1023px) {
+        font-size    : 16px;
+        width        : 320px;
+        height       : 102px;
+        margin-bottom: 60px;
+        padding      : 0 25px;
+      }
+
+      @media (max-width: 767px) {
+        font-size    : 14px;
+        width        : 282px;
+        height       : 92px;
+        margin-bottom: 56px;
+      }
+
+      span {
+        position   : absolute;
+        font-family: $philosopher;
+        font-size  : 64px;
+        color      : #ffe0cd;
+        text-shadow: $shadow;
+
+        @media (max-width: 1365px) {
+          font-size: 58px;
+        }
+
+        @media (max-width: 1023px) {
+          font-size: 44px;
+        }
+      }
+
+
+      &:first-child {
+        background-image: url(../img/border_uniqueness_01.png);
+
+        @media (max-width:767px) {
+          order: 1;
+        }
+
+        span {
+          top : 33px;
+          left: -6px;
+
+          @media (max-width:1023px) {
+            top: 23px;
+          }
+
+          @media (max-width:767px) {
+            top : 17px;
+            left: -4px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        background-image: url(../img/border_uniqueness_05.png);
+
+        @media (max-width:767px) {
+          order: 5;
+        }
+
+        span {
+          top  : 33px;
+          right: -15px;
+
+          @media (max-width: 1365px) {
+            right: -12px;
+          }
+
+          @media (max-width: 1023px) {
+            right: -7px;
+            top  : 17px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        background-image: url(../img/border_uniqueness_02.png);
+
+        @media (max-width:767px) {
+          order: 2;
+        }
+
+        span {
+          top : -37px;
+          left: 80px;
+
+          @media (max-width: 1365px) {
+            left: 75px;
+          }
+
+          @media (max-width: 1023px) {
+            top : -27px;
+            left: 56px;
+          }
+
+          @media (max-width: 767px) {
+            left: 46px;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        background-image: url(../img/border_uniqueness_06.png);
+
+        @media (max-width:767px) {
+          order: 6;
+        }
+
+        span {
+          top  : -35px;
+          right: 73px;
+
+          @media (max-width: 1023px) {
+            top  : -25px;
+            right: 53px;
+          }
+
+          @media (max-width: 767px) {
+            right: 43px;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        background-image: url(../img/border_uniqueness_03.png);
+
+        @media (max-width:767px) {
+          order: 3;
+        }
+
+        span {
+          top : -35px;
+          left: 215px;
+
+          @media (max-width: 1365px) {
+            left: 200px;
+          }
+
+          @media (max-width: 1023px) {
+            top : -25px;
+            left: 150px;
+          }
+
+          @media (max-width: 767px) {
+            left: 132px;
+          }          
+        }
+      }
+
+      &:nth-child(6) {
+        background-image: url(../img/border_uniqueness_07.png);
+
+        @media (max-width:767px) {
+          order: 7;
+        }
+
+        span {
+          top : -35px;
+          left: 220px;
+
+          @media (max-width: 1365px) {
+            left: 205px;
+          }
+
+          @media (max-width: 1023px) {
+            top : -25px;
+            left: 154px;
+          }
+          @media (max-width: 767px) {
+           left: 134px;
+          }
+        }
+      }
+
+      &:nth-child(7) {
+        background-image: url(../img/border_uniqueness_04.png);
+
+        @media (max-width:767px) {
+          order: 4;
+        }
+
+        span {
+          top  : -35px;
+          right: 75px;
+
+          @media (max-width: 1023px) {
+            top  : -25px;
+            right: 55px;
+          }
+          @media (max-width: 767px) {
+            right: 45px;
+          }
+        }
+      }
+
+      &:nth-child(8) {
+        background-image: url(../img/border_uniqueness_08.png);
+
+        @media (max-width:767px) {
+          order: 8;
+        }
+
+        span {
+          top : -35px;
+          left: 83px;
+
+          @media (max-width: 1365px) {
+            left: 78px;
+          }
+
+          @media (max-width: 1023px) {
+            top : -25px;
+            left: 58px;
+          }
+
+          @media (max-width: 767px) {
+            left: 48px;
+          }
+        }
+      }
+
+      p {
+        @include block;
+      }
+    }
+  }
+}

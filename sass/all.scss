@@ -1,0 +1,33 @@
+/* SCSS Compiled */
+@import "global/reset.scss";
+@import "global/mixins.scss";
+@import "global/var.scss";
+@import "global/styles.scss";
+
+@import "partials/header.scss";
+@import "partials/come_to_us.scss";
+@import "partials/for_whom_our_courses.scss";
+@import "partials/our_courses.scss";
+@import "partials/our_teachers.scss";
+@import "partials/our_uniqueness.scss";
+@import "partials/reviews.scss";
+@import "partials/footer.scss";
+@import "partials/slick.scss";
+@import "partials/slick_changes.scss";
+
+//page materials
+@import "partials/teaching_materials.scss";
+@import "partials/useful_materials.scss";
+
+//page gallery
+@import "partials/our_video.scss";
+
+//page contatcs
+@import "partials/contacts.scss";
+
+// form info
+@import "partials/form_info.scss";
+
+// thanks
+@import "partials/thanks.scss";
+

@@ -1,0 +1,213 @@
+footer {
+	@include block;
+	height             : 585px;
+	background-image   : url(../img/bg_header.png);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center center;
+	padding            : 75px 0 75px 70px;
+
+	@media (max-width:1023px) {
+		height: 550px;
+	}
+
+	@media (max-width:767px) {
+		padding: 40px 0 40px 20px;
+		height : 370px;
+	}
+
+	@media (max-width:767px) {
+		padding: 40px 0 40px 20px;
+		height : 320px;
+	}
+
+	.footer_gradient {
+		@include block;
+		height      : 100%;
+		padding-left: 105px;
+		padding-top : 70px;
+
+		@media (max-width:1023px) {
+			padding-left: 50px;
+			padding-top : 50px;
+		}
+
+		@media (max-width:767px) {
+			padding-left: 20px;
+			padding-top : 30px;
+		}
+
+		&:before {
+			@include pseudo;
+			top   : 0;
+			left  : 0;
+			width : 126%;
+			height: 100%;
+			background: linear-gradient(90deg,
+					rgba(255, 224, 205, 0.85) 0%,
+					rgba(255, 224, 205, 0.526823) 45.31%,
+					rgba(255, 224, 205, 0.2975) 70.83%,
+					rgba(255, 224, 205, 0) 100%);
+			box-shadow: -10px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		.wrapper_logo_nav {
+			@include block;
+			display        : flex;
+			justify-content: start;
+
+			.footer_logo {
+				width   : 232px;
+				height  : 244px;
+				margin  : 30px 84px 0 0;
+				position: relative;
+				display : block;
+
+				box-shadow: $shadow;
+
+				@media (max-width:1023px) {
+					width : 180px;
+					height: 189px;
+				}
+
+				@media (max-width:767px) {
+					width : 120px;
+					height: 126px;
+					margin: 0 15px 0 0;
+				}
+
+				img {
+					position: relative;
+					width   : 100%;
+				}
+			}
+
+			.footer_nav {
+				display: block;
+
+				p {
+					display    : none;
+					max-width  : 200px;
+					position   : relative;
+					z-index    : 3;
+					padding-top: 10px;
+					margin     : 0 auto;
+					font-family: $philosopher;
+					font-size  : 36px;
+					font-weight: 700;
+					float      : right;
+					text-shadow: $shadow;
+					line-height: 1.5;
+
+					@media (max-width:767px) {
+						display    : block;
+						max-width  : 90px;
+						padding-top: 0;
+						font-size  : 24px;
+						min-height : 126px;
+					}
+				}
+
+				ul {
+					@include block;
+
+					@media (max-width:767px) {
+						display: none;
+					}
+
+					li {
+						display      : block;
+						margin-bottom: 24px;
+						font-size    : 36px;
+
+						@media (max-width:1023px) {
+							font-size: 28px;
+						}
+
+						a {
+							display    : inline-block;
+							position   : relative;
+							color      : #000;
+							text-shadow: $shadow;
+							font-weight: 500;
+							transition : $speedAnimation;
+
+							&:hover {
+								color    : $redColor;
+								transform: $hoverAnimation;
+							}
+
+							span.materials_link_mobile {
+								display: none;
+
+								@media (max-width: 767px) {
+									display: inline-block;
+								}
+							}
+
+							span.materials_link_pc {
+								@media (max-width: 767px) {
+									display: none;
+								}
+							}
+						}
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.wrapeer_social {
+			@include block;
+
+
+			.social {
+				width          : 270px;
+				align-items    : center;
+				display        : flex;
+				justify-content: space-between;
+				position       : absolute;
+				left           : calc(80% - 100px);
+				top            : 0;
+
+				li {
+					width: 40px;
+				}
+
+				@media (max-width:1023px) {
+					font-size: 28px;
+					left     : 100px;
+					width    : calc(100% - 200px);
+					max-width: 500px;
+					position : relative;
+					bottom   : auto;
+					margin   : 20px 0 0 0;
+				}
+
+				@media (max-width:767px) {
+					font-size: 28px;
+					left     : 30px;
+					width    : calc(100% - 60px);
+					max-width: 500px;
+					margin   : 20px 0 0 0;
+				}
+
+				a {
+					position: relative;
+
+					img {
+						@include block;
+						transition: all 400ms ease-in;
+
+						&:hover {
+							transform: rotate(360deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}

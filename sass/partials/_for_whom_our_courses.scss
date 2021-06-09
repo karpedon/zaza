@@ -1,0 +1,128 @@
+.for_whom_our_courses {
+  padding-bottom: 120px;
+
+  @media (max-width: 1023px) {
+    padding-bottom: 90px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 60px;
+  }
+
+  ul {
+    width: 100%;
+
+    @media (max-width: 767px) {
+      margin-top: 110px;
+    }
+
+    li {
+      @include block;
+      margin-bottom: 18px;
+      padding-left: 28px;
+
+      @media (max-width: 1365px) {
+        font-size: 22px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 20px;
+        background-image: url(../img/marker_list_big_arrow.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        top: 5px;
+        left: 0;
+
+        @media (max-width: 1023px) {
+          width: 18px;
+        }
+
+        @media (max-width: 767px) {
+          width: 13px;
+          top: 2px;
+        }
+      }
+    }
+  }
+  
+  .our_courses__img_wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 605px;
+
+    @media (max-width: 1365px) {
+      width: 480px;
+    }
+
+    @media (max-width: 1023px) {
+      width: 190px;
+      top: 70px;
+      right: 30px;
+    }
+
+    @media (max-width: 767px) {
+      width: 135px;
+      top: 70px;
+      right: 10px;
+     
+    }
+
+    div {
+      box-shadow: $shadow;
+      position: absolute;
+
+      &:first-child {
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 248px;
+        height: 313px;
+
+        @media (max-width: 1365px) {
+          width: 190px;
+          height: 239px;
+        }
+
+        @media (max-width: 1023px) {
+          width: 190px;
+          height: 239px;
+        }
+        @media (max-width: 767px) {
+          width: 135px;
+          height: 170px;
+        }
+      }
+
+      &:last-child {
+        top: 102px;
+        left: 29%;
+        z-index: 1;
+        width: 397px;
+        height: 267px;
+
+        @media (max-width: 1365px) {
+          width: 301px;
+          height: 204px;
+        }
+
+        @media (max-width: 1023px) {
+          display: none;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

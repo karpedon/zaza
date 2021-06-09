@@ -1,0 +1,94 @@
+.useful_articles {
+    @include block;
+    padding-bottom: 120px;
+
+    @media (max-width: 767px) {
+        padding-bottom: 75px;
+    }
+
+    ul {
+        @include block;
+
+        li {
+            @include block;
+            font-size    : 30px;
+            margin-bottom: 26px;
+            padding-left : 40px;
+            transition   : $speedAnimation;
+
+            @media (max-width: 767px) {
+                font-size   : 18px;
+                padding-left: 25px;
+
+            }
+
+            &:before {
+                content          : '';
+                position         : absolute;
+                top              : 9px;
+                left             : 0;
+                background-image : url(../img/marker_list_big_arrow.png);
+                background-repeat: no-repeat;
+                width            : 22px;
+                height           : 22px;
+
+                @media (max-width: 767px) {                   
+                    background-size: 65%;
+                    top              : 5px;
+                    
+
+
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                margin-left: 10px;
+            }
+
+            a {
+                color      : #33425B;
+                font-weight: 700;
+                transition : $speedAnimation;
+                display    : block;
+                font-family   : "Philosopher", sans-serif;
+
+
+                &:hover {
+                    color: $redColor;
+                }
+            }
+        }
+    }
+
+    .materials_scroll {
+        position: absolute;
+        width   : 200px;
+        height  : 178px;
+        top     : -60px;
+        right   : 0;
+
+        @media (max-width:1365px) {
+            top  : -20px;
+            right: 50px;
+            width: 140px;
+        }
+
+        @media (max-width: 767px) {
+            top   : -10px;
+            right : 50px;
+            width : 67px;
+            height: 60px;
+        }
+
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,60 @@
+.our_video {
+    @include block;
+    padding-top: 60px;
+    margin-bottom: 194px;
+
+    div {
+        @include block;
+        
+
+        a {
+            display     : inline-block;
+            margin-right: 50px;
+            width       : 735px;        
+            transition: $speedAnimation;  
+
+            &:hover {
+                transform: $hoverAnimation;
+            }
+        }
+
+        p {
+            font-size  : 30px;
+            padding-top: 60px;
+            width      : 371px;
+            display    : inline-block;
+            float      : right;
+
+            a {
+                @include block;
+                margin-top  : 46px;
+                padding-left: 70px;
+                font-size   : 36px;
+                text-shadow : $shadow;
+                color       : #000;
+                transition  : $speedAnimation;
+
+                &:hover {
+                    transform: $hoverAnimation;
+                    color    : $redColor;
+                }
+
+
+                &:before {
+                    content          : '';
+                    position         : absolute;
+                    top              : 4px;
+                    left             : 0;
+                    width            : 50px;
+                    height           : 40px;
+                    background-image : url(../img/icon_youtube_link.png);
+                    background-repeat: no-repeat;
+
+                }
+
+            }
+
+        }
+
+    }
+}

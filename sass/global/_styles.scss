@@ -1,0 +1,109 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.17;
+  font-family: "Raleway", sans-serif;
+  font-size  : 24px;
+  color      : #000;
+}
+
+#wrapper {
+  display         : block;
+  position        : relative;
+  width           : 100%;
+  height          : 100%;
+  background-color: #fee8d4;
+  overflow        : hidden;
+}
+
+.layout {
+  margin      : 0 auto;
+  position    : relative;
+  max-width   : 1230px;
+  padding-left: 74px;
+  height      : 100%;
+
+  @media (max-width:1365px) {
+    padding-left : 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width:767px) {
+    margin       : 0 auto;
+    width        : 300px;
+    padding-left : 10px;
+    padding-right: 10px;
+  }
+}
+
+main {
+  @include block;
+  padding-top: 60px;
+
+  @media (max-width:767px) {
+    padding-top: 45px;
+  }
+
+}
+
+.none {
+  display: none;
+}
+
+h2 {
+  font-family  : $philosopher;
+  font-size    : 36px;
+  color        : $redColor;
+  line-height  : 100px;
+  position     : relative;
+  padding-left : 24px;
+  margin-bottom: 60px;
+  margin-left  : 10px;
+
+  @media (max-width:1365px) {
+    font-size   : 34px;
+    padding-left: 28px;
+    line-height : 100px;
+  }
+
+  @media (max-width:1023px) {
+    font-size   : 32px;
+    line-height : 85px;
+    padding-left: 29px;
+  }
+
+  @media (max-width:767px) {
+    font-size    : 18px;
+    padding-left : 11px;
+    line-height  : 47px;
+    margin-left  : 0;
+    margin-bottom: 40px;
+  }
+
+
+
+  &:before {
+    @include pseudo;
+    top:0;
+    left: 0;
+    width           : 70px;
+    height          : 110px;
+    background-image: url(../img/title_frame.png);
+
+
+    @media (max-width:1023px) {
+      width          : 60px;
+      height         : 100px;
+      background-size: contain;
+    }
+
+    @media (max-width:767px) {
+      width          : 30px;
+      height         : 50px;
+      background-size: contain;
+    }
+
+  }
+}

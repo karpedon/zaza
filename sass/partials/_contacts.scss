@@ -1,0 +1,444 @@
+.contacts {
+  @include block;
+
+  h2 {
+    margin-bottom: 94px;
+    @media (max-width: 767px) {
+      margin-bottom: 58px;
+    }
+  }
+
+  .social_contacts {
+    @include block;
+    margin-bottom: 168px;
+
+    @media (max-width: 1023px) {
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 66px;
+    }
+
+    li {
+      @include block;
+      margin-bottom: 52px;
+      padding-left: 108px;
+      vertical-align: baseline;
+      display: flex;
+      font-size: 30px;
+      transition: $speedAnimation;
+
+      @media (max-width: 1023px) {
+        margin-bottom: 40px;
+        font-size: 24px;
+        padding-left: 108px;
+      }
+
+      @media (max-width: 767px) {
+        margin-bottom: 25px;
+        font-size: 14px;
+        padding-left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        transform: $hoverAnimation;
+
+        a {
+          color: $redColor;
+          font-weight: 600;
+          text-shadow: $shadow;
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-right: 70px;
+
+        @media (max-width: 1023px) {
+          margin-right: 50px;
+          width: 40px;
+        }
+
+        @media (max-width: 767px) {
+          margin-right: 20px;
+          width: 25px;
+        }
+      }
+
+      a {
+        color: #000;
+        transition: $speedAnimation;
+
+        &:hover {
+          color: $redColor;
+          font-weight: 600;
+          text-shadow: $shadow;
+        }
+      }
+    }
+  }
+
+  .adres_wrapper {
+    margin-bottom: 32px;
+    height: 493px;
+
+    @media (max-width: 1365px) {
+      height: 418px;
+    }
+    @media (max-width: 767px) {
+      height: 540px;
+    }
+
+    .shcool_adress {
+      width: 620px;
+      padding-right: 30px;
+      font-size: 30px;
+      float: left;
+
+      @media (max-width: 1365px) {
+        width: 560px;
+        font-size: 26px;
+        padding-right: 10px;
+      }
+
+      @media (max-width: 1023px) {
+        width: 400px;
+        font-size: 18px;
+      }
+
+      p {
+        margin-bottom: 70px;
+
+        @media (max-width: 1023px) {
+          margin-bottom: 90px;
+          width: 650px;
+          font-size: 24px;
+        }
+
+        @media (max-width: 767px) {
+          margin-bottom: 36px;
+          width: 205px;
+          font-size: 18px;
+        }
+      }
+
+      .name_of_school {
+        margin-bottom: 56px;
+        color: #33425b;
+        font-size: 35px;
+        padding-left: 80px;
+        position: relative;
+        text-shadow: $shadow;
+
+        @media (max-width: 1365px) {
+          font-size: 28px;
+          padding-top: 10px;
+        }
+
+        @media (max-width: 1023px) {
+          font-size: 22px;
+          padding-left: 60px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 17px;
+          padding-left: 40px;
+          padding-top: 7px;
+        }
+
+        &:before {
+          @include pseudo;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 50px;
+          background-image: url(../img/museum_pic.png);
+
+          @media (max-width: 1023px) {
+            background-size: cover;
+            background-position: 0 3px;
+            width: 40px;
+            height: 40px;
+          }
+
+          @media (max-width: 767px) {
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        span {
+          display: block;
+          width: 330px;
+          margin-top: 48px;
+          font-size: 30px;
+          color: #000;
+          text-shadow: none;
+
+          @media (max-width: 1365px) {
+            font-size: 26px;
+          }
+
+          @media (max-width: 1023px) {
+            font-size: 18px;
+          }
+          @media (max-width: 1023px) {
+            font-size: 14px;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+
+    .geolocation {
+      width: 385px;
+      margin-top: 20px;
+      float: right;
+      display: block;
+
+      @media (max-width: 1365px) {
+        width: 345px;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 1023px) {
+        width: 250px;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 767px) {
+        width: 250px;
+        margin-top: 0px;
+      }
+
+      div {
+        position: relative;
+        height: 385px;
+        width: 100%;
+
+        @media (max-width: 1365px) {
+          height: 340px;
+        }
+
+        @media (max-width: 1023px) {
+          height: 230px;
+          margin-top: 100px;
+        }
+
+        @media (max-width: 767px) {
+          height: 230px;
+          margin-top: 0;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -50px;
+          right: -15px;
+          width: 1px;
+          height: 90%;
+          background-color: #29252c;
+          box-shadow: $shadow;
+          z-index: 5;
+          @media (max-width: 767px) {
+            top: -35px;
+            right: -15px;
+          }
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: -33px;
+          width: 90%;
+          height: 1px;
+          background-color: #29252c;
+          box-shadow: $shadow;
+          z-index: 5;
+
+          @media (max-width: 767px) {
+            right: -23px;
+            top: -15px;
+          }
+        }
+
+        img {
+          position: absolute;
+
+          &:first-child {
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+
+          &:nth-child(2) {
+            z-index: 2;
+            bottom: -56px;
+            left: -5px;
+          }
+
+          &:last-child {
+            z-index: 3;
+            bottom: -37px;
+            left: 20px;
+
+            @media (max-width: 1365px) {
+              width: 40px;
+              height: 40px;
+              left: 10px;
+            }
+            @media (max-width: 1023px) {
+              width: 34px;
+              height: 34px;
+              left: 10px;
+            }
+
+            @media (max-width: 1023px) {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .have_a_question {
+    font-size: 30px;
+    margin-bottom: 154px;
+
+    @media (max-width: 1660px) {
+      padding-left: 80px;
+    }
+
+    @media (max-width: 1365px) {
+      padding-left: 120px;
+      font-size: 26px;
+    }
+
+    @media (max-width: 1023px) {
+      padding-left: 120px;
+      font-size: 22px;
+      margin-bottom: 100px;
+    }
+    @media (max-width: 768px) {
+      padding-left: 70px;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    p:first-child {
+      margin-bottom: 40px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p:nth-child(2) {
+      margin-bottom: 60px;
+    }
+
+    a {
+      @include block;
+      width: 388px;
+      height: 107px;
+      line-height: 95px;
+      font-family: $philosopher;
+      color: $redColor;
+      text-align: center;
+      background-image: url(../img/button_frame_send_info.png);
+      font-size: 36px;
+      text-shadow: $shadow;
+      transition: $speedAnimation;
+
+      @media (max-width: 1365px) {
+        width: 340px;
+        height: 94px;
+        line-height: 87px;
+        background-size: cover;
+        font-size: 30px;
+      }
+
+      @media (max-width: 1023px) {
+        width: 250px;
+        height: 68px;
+        line-height: 64px;
+
+        font-size: 24px;
+      }
+
+      @media (max-width: 767px) {
+        width: 193px;
+        height: 52px;
+        line-height: 48px; // background-size: cover;
+        font-size: 18px;
+        margin-left: -40px;
+      }
+
+      &:hover {
+        font-weight: 600;
+        color: $redColor;
+        transform: $hoverAnimation;
+      }
+    }
+  }
+
+  .silhouette_06 {
+    position: absolute;
+    top: 225px;
+    right: 90px;
+
+    @media (max-width: 1023px) {
+      right: -20px;
+      width: 250px;
+    }
+
+    @media (max-width: 767px) {
+      right: -25px;
+      width: 120px;
+      top: 300px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .silhouette_07 {
+    position: absolute;
+    bottom: -30px;
+    left: -180px;
+    width: 277px;
+    height: auto;
+
+    @media (max-width: 1660px) {
+      left: -50px;
+      width: 210px;
+    }
+
+    @media (max-width: 1365px) {
+      left: 0;
+      bottom: 0;
+      width: 150px;
+    }
+
+    @media (max-width: 767px) {
+      left: 0;
+      bottom: 80px;
+      width: 80px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
